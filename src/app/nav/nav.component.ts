@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
-  constructor() { }
+  link1: string;
+  link2: string;
+  link3: string;
+  constructor() {
+    this.link1 = 'page1';
+    this.link2 = 'page2';
+    this.link3 = 'page3';
+   }
 
   ngOnInit() {
   }

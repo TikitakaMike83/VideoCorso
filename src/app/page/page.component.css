@@ -1,0 +1,16 @@
+table{
+   background: #dadada;
+}
+
+td{
+  padding: 8x;
+}
+
+.green {
+  color :green;
+  bottom: -10px;
+}
+.red {
+  color :red;
+  bottom: -10px;
+}

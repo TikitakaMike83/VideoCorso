@@ -1,0 +1,38 @@
+<p>
+page works!
+</p>
+<h2>Direttiva *ngFor</h2>
+<ul>
+  <li *ngFor="let notizia of news">
+  <p>{{notizia}}</p>
+  </li>
+</ul>
+
+<table border="1">
+  <!-- Intestazioni-->
+  <tr>
+  <th>Titolo</th>
+  <th>Autore</th>
+  <th>Genere</th>
+  <th>Isbn</th>
+  <th>Trama</th>
+  <th>Page</th>
+  <th>Letto</th>
+  </tr>
+
+<!--leggi quello che c'è in books e inseriscilo nella varialile libro 
+Per accedere ad un oggetto uso il punto
+-->
+<tr *ngFor="let libro of books">
+<td>{{libro.titolo}}</td>
+<td>{{libro.autore}}</td>
+<td>{{libro.genere}}</td>
+<td>{{libro.isbn}}</td>
+<td>{{libro.trama}}</td>
+<td>{{libro.page}}</td>
+<td>
+<span *ngIf="libro.letto==='OK'" class="material-icons green">done</span>
+<span *ngIf="libro.letto==='NO'" class="material-icons red">close</span>
+</td>
+</tr>
+</table>

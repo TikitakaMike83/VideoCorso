@@ -30,9 +30,15 @@ Per accedere ad un oggetto uso il punto
 <td>{{libro.isbn}}</td>
 <td>{{libro.trama}}</td>
 <td>{{libro.page}}</td>
-<td>
+<!--<td>  // ngIf
 <span *ngIf="libro.letto==='OK'" class="material-icons green">done</span>
 <span *ngIf="libro.letto==='NO'" class="material-icons red">close</span>
-</td>
+</td> -->
+<!--<td>  // come usare // ngIf con else
+<span *ngIf="libro.letto==='OK'; else nonletto" class="material-icons green">done</span>
+<ng-template #nonletto>
+<span class="material-icons red">close</span>
+</ng-template>
+</td> -->
 </tr>
 </table>

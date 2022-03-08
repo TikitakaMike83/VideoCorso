@@ -14,3 +14,8 @@ td{
   color :red;
   bottom: -10px;
 }
+.gold {
+  color: goldenrod;
+  font-size: 25px;
+  width: auto;
+}

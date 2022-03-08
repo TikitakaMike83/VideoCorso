@@ -17,7 +17,8 @@ page works!
   <th>Isbn</th>
   <th>Trama</th>
   <th>Page</th>
-  <th>Letto</th>
+  <th>Letto</th> 
+  <th>Recensione</th>
   </tr>
 
 <!--leggi quello che c'è in books e inseriscilo nella varialile libro 
@@ -34,11 +35,22 @@ Per accedere ad un oggetto uso il punto
 <span *ngIf="libro.letto==='OK'" class="material-icons green">done</span>
 <span *ngIf="libro.letto==='NO'" class="material-icons red">close</span>
 </td> -->
-<!--<td>  // come usare // ngIf con else
+<td>   <!--// come usare ngIf con else  -->
 <span *ngIf="libro.letto==='OK'; else nonletto" class="material-icons green">done</span>
 <ng-template #nonletto>
 <span class="material-icons red">close</span>
 </ng-template>
-</td> -->
+</td> 
+
+<!-- dammi tutte quelle con condizioni che danno true -->
+<td [ngSwitch]= "true">
+<span *ngSwitchCase='libro.voto >=4 && libro.voto < 10' >
+      <i class="material-icons gold">star_rate</i>
+</span>
+<span *ngSwitchCase='libro.voto >=11'> 
+<i class="material-icons gold">star_rate</i>
+</span>
+
+</td>
 </tr>
 </table>

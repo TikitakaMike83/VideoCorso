@@ -38,11 +38,14 @@ grey:string;
 myClass: Object;
 red:string;
 
+oggi:Date;
+
 // le variabili vanno semrpe instanziat eall'interno del construttore
   constructor() { 
     this.grey = 'grey';
     this.myClass = {'textAlign':'center','color':'red'};
     this.red = 'red';
+    this.oggi= new Date();
   }
 
   ngOnInit() {

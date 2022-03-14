@@ -60,3 +60,27 @@ Per accedere ad un oggetto uso il punto
 </td>
 </tr>
 </table>
+
+
+
+<h2>Esempio Pipe con le stringhe</h2>
+<p>{{'fuori nevica tanto' | uppercase }} </p>
+<p>{{'FUORI PIOVE' | lowercase }} </p>
+<!--
+// IL PRAMETRO SI PASSA CON i : 
+// LA STRIGNA SI METTE NEGLI APICI -->
+<p>{{'fuori nevica tanto' | slice:5:12 }} </p>
+
+<h2>Esempio Pipe DATE</h2>
+<p> Pipe data formato medio <span [ngStyle]= "{'color':red}" > {{oggi | date:'mediumDate'}} </span> </p>
+<p> Pipe data formato short <span [ngStyle]= "{'color':red}" > {{oggi | date:'shortDate'}} </span> </p>
+<p> Pipe data ora <span [ngStyle]= "{'color':red}" > {{oggi | date:'shortTime'}} </span> </p>
+<p> Pipe data formato italiano <span [ngStyle]= "{'color':red}" > {{oggi | date:'d/MMMM/Y'}} </span> </p>
+
+<h2>Esempio Pipe number</h2>
+paramtri 1 indica unità , il secondo il decimale
+<p> Pipe number {{230 | number:'1.3'}}</p>
+<p> Pipe number {{1.35452 | number:'1.3'}}</p>
+<p> Pipe number con percentuale {{1.35452 | percent}}</p>
+<p> Pipe number con percentuale {{1.35452 | percent:'1.2'}}</p>
+<p> Pipe number con percentuale {{1.35452 | percent:'1.1-1'}}</p>

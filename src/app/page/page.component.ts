@@ -33,7 +33,17 @@ books = [
     voto : 3
   },   
 ];
-  constructor() { }
+
+grey:string;
+myClass: Object;
+red:string;
+
+// le variabili vanno semrpe instanziat eall'interno del construttore
+  constructor() { 
+    this.grey = 'grey';
+    this.myClass = {'textAlign':'center','color':'red'};
+    this.red = 'red';
+  }
 
   ngOnInit() {
   }

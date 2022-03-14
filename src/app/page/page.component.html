@@ -1,6 +1,12 @@
 <p>
 page works!
 </p>
+
+<h2 [ngClass]="grey" >Direttiva ngclass</h2>
+<!-- ngstyle essendo un oggetto possiamo aggiungere valri attributi-->
+<h2 [ngStyle]="{'color':'red','textAlign':'center'}" >Direttiva ngStyle</h2>
+<h2 [ngStyle]="myClass" >Direttiva ngStyle con costrtuttore in ts</h2>
+
 <h2>Direttiva *ngFor</h2>
 <ul>
   <li *ngFor="let notizia of news">

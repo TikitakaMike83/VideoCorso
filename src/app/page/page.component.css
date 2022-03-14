@@ -19,3 +19,8 @@ td{
   font-size: 25px;
   width: auto;
 }
+.grey {
+  color:gray;
+  font-size: 50px;
+  text-align: center;
+}

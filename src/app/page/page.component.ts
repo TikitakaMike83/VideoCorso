@@ -39,9 +39,12 @@ myClass: Object;
 red:string;
 
 oggi:Date;
-
+books2: object;
+text:string;
 // le variabili vanno semrpe instanziat eall'interno del construttore
   constructor() { 
+    this.text = 'ciao come stai';
+    this.books2 = {titolo: 'Il nome della Rosa', autore: 'Umberto'};
     this.grey = 'grey';
     this.myClass = {'textAlign':'center','color':'red'};
     this.red = 'red';

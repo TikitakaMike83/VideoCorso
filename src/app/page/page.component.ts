@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from '../services/book.service';
 
 @Component({
   selector: 'app-page',
@@ -11,28 +12,7 @@ news = [
   'Notizia2',
   'Notizia3'
 ];
-books = [
-  {
-    titolo: 'Il nome della Rosa',
-    autore: 'Umberto',
-    genere: 'giallo',
-    isbn:'88454-4',
-    trama: 'loren',
-    page : 500,
-    letto : 'OK',
-    voto: 4
-  },
-  {
-    titolo: 'Il nome della Rosa2',
-    autore: 'Umberto2',
-    genere: 'giallo2',
-    isbn:'88454-42',
-    trama: 'loren2',
-    page : 500,
-    letto : 'NO',
-    voto : 3
-  },   
-];
+books = [];
 
 grey:string;
 myClass: Object;
@@ -42,7 +22,8 @@ oggi:Date;
 books2: object;
 text:string;
 // le variabili vanno semrpe instanziat eall'interno del construttore
-  constructor() { 
+  constructor(service: BookService) { 
+    this.books = service.getBooks();
     this.text = 'ciao come stai';
     this.books2 = {titolo: 'Il nome della Rosa', autore: 'Umberto'};
     this.grey = 'grey';

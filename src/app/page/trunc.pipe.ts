@@ -1,11 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'truncate'
+  name: 'trunc'
 })
-export class TruncatePipe implements PipeTransform {
+export class TruncPipe implements PipeTransform {
 
-  transform(value: string, args: number = 100): string {
+  transform(value: string, args: number = 10): string {
     let result = value;
 
     if(value){
